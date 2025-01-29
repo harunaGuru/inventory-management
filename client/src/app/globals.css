@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+html, body, #root, .app{
+  height: 100%;
+  width: 100%;
+  @apply text-sm;
+  @apply bg-gray-500;
+  @apply text-gray-900
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+
+}
+::-webkit-scrollbar-track {
+  /* background: #f1f1f1;  */
+  @apply bg-gray-400 rounded-md
+}
+::-webkit-scrollbar-thumb {
+  background:  #889; 
+  border-radius: 10px;
+}
+
+@media (min-width: 768px){
+  .customised-grid-layout{
+    grid-template-rows: repeat(8, 20vh);
+  }
+@media (min-width: 1024px){
+  .customised-grid-layout{
+    grid-template-rows: repeat(8, 11.5vh);
+  }
+}
+}
